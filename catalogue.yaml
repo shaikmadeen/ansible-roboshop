@@ -1,0 +1,9 @@
+- name: install catalogue component
+  hosts: catalogue
+  become: yes
+  tasks:
+  - name: disable old nodejs 
+    ansible.builtin.service:
+     name: nodejs
+     state: disable
+
