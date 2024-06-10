@@ -2,8 +2,10 @@
   hosts: catalogue
   become: yes
   tasks:
-  - name: disable old nodejs 
+  - name: disable old nodejs and enable nodejs
     ansible.builtin.service:
-     name: nodejs
+     name: nodejs:18
      state: stopped
+     enabled: yes
+
 
