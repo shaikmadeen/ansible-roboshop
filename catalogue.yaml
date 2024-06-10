@@ -44,6 +44,7 @@
     ansible.builtin.copy:
       src: mongod.repo
       dest: /etc/yum.repos.d/mongo.repo
+      remote_src: yes
 
 
   
