@@ -3,9 +3,4 @@
   become: yes
   tasks:
   - name: disable old nodejs and enable nodejs
-    ansible.builtin.service:
-     name: nodejs:18
-     state: stopped
-     enabled: yes
-
-
+    ansible.builtin.shell: dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
