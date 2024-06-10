@@ -3,9 +3,9 @@
   become: yes
   tasks:
   - name: install nginx
-    ansible.builtin.dnf:
+    ansible.builtin.yum:
       name: nginx 
-      state: present
+      state: installed
   
   - name: remove html directory
     ansible.builtin.file:
