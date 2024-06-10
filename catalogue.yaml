@@ -42,7 +42,7 @@
       daemon_reload: true
   - name: Copy mongo repo to yum.repos.d
     ansible.builtin.copy:
-      src: mongo.repo
+      src: mongod.repo
       dest: /etc/yum.repos.d/mongo.repo
 
 
