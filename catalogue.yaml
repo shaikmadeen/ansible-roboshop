@@ -5,5 +5,5 @@
   - name: disable old nodejs 
     ansible.builtin.service:
      name: nodejs
-     state: disable
+     state: stopped
 
