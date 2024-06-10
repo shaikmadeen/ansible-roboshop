@@ -40,11 +40,13 @@
   - name: deamon realod and start
     ansible.builtin.systemd_service:
       daemon_reload: true
-  - name: Copy mongo repo to yum.repos.d
-    ansible.builtin.copy:
-      src: mongodb.repo
-      dest: /etc/yum.repos.d/mongo.repo
-      remote_src: yes
+  - name: start and enable catalogue
+    ansible.builtin.service:
+      name: catalogue
+      state: started
+      enabled: yes
+
+
 
 
   
