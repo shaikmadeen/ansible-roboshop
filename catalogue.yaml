@@ -8,3 +8,7 @@
     ansible.builtin.yum:
       name: nodejs 
       state: installed
+  - name: create roboshop user
+    ansible.builtin.user:
+     name: roboshop
+
