@@ -61,9 +61,9 @@
       name: mongodb-org-shell
       state: present
 
-  - name: load user data
-    ansible.builtin.shell: mongo --host 10.0.1.169 < /app/schema/user.js
-    when: user_count.stdout == "0" # keep double quotes
+    - name: load user data
+    ansible.builtin.shell: mongo --host 10.0.1.169 </app/schema/user.js
+
 
   - name: start and enable user
     ansible.builtin.service:
